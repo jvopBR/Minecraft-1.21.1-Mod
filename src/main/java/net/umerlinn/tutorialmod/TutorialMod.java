@@ -1,6 +1,7 @@
 package net.umerlinn.tutorialmod;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.umerlinn.tutorialmod.block.ModBlocks;
 import net.umerlinn.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -34,6 +35,7 @@ public class TutorialMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,6 +53,11 @@ public class TutorialMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BISMUTH);
             event.accept(ModItems.RAW_BISMUTH);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
+            event.accept(ModBlocks.BISMUTH_ORE);
         }
     }
 
