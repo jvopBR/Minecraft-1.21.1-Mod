@@ -27,6 +27,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block",
+            () -> new Block((BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.CALCITE))));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T>  toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

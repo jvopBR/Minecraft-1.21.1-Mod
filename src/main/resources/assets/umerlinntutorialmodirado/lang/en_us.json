@@ -3,5 +3,8 @@
   "item.umerlinntutorialmodirado.raw_bismuth": "Raw Bismuth",
 
   "block.umerlinntutorialmodirado.bismuth_block": "Block of Bismuth",
-  "block.umerlinntutorialmodirado.bismuth_ore": "Bismuth Ore"
+  "block.umerlinntutorialmodirado.bismuth_ore": "Bismuth Ore",
+
+  "creativetab.umerlinntutorialmodirado.bismuth_items": "Bismuth Items",
+  "creativetab.umerlinntutorialmodirado.bismuth_blocks": "Bismuth Blocks"
 }
